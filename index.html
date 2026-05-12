@@ -146,6 +146,28 @@
 .nav__logo { height: 58px; width: auto; display: block; }
 .footer__logo { height: 72px; width: auto; display: block; margin-bottom: var(--s-1); }
 @media (max-width: 860px) { .nav__logo { height: 48px; } }
+
+.hero__title-em { font-weight: 500; font-style: normal; }
+
+/* ── Typewriter animation for hero H1 ──────────────────────────────────── */
+.hero__title.tw-active .tw-char { opacity: 0; transition: opacity 0.12s ease-out; }
+.hero__title.tw-active .tw-char.is-visible { opacity: 1; }
+.hero__title .tw-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.78em;
+  background: var(--teal-bright);
+  margin-left: 4px;
+  vertical-align: baseline;
+  animation: tw-blink 0.75s steps(2, end) infinite;
+  border-radius: 1px;
+}
+.hero__title.tw-done .tw-cursor { display: none; }
+@keyframes tw-blink { to { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero__title.tw-active .tw-char { opacity: 1 !important; transition: none !important; }
+  .hero__title .tw-cursor { display: none !important; }
+}
 .nav__brand { display: flex; align-items: center; gap: 0; text-decoration: none; }
 .nav__brand .nav__wordmark, .nav__brand .nav__mark { display: none; }
 .footer__brand .footer__wordmark { display: none; }
@@ -284,7 +306,7 @@
   <div class="container hero__inner">
     <div class="hero__eyebrow eyebrow">The Life Sciences &amp; Healthcare Execution Partner</div>
     <h1 class="hero__title">
-      You shouldn't need <em class="serif-italic teal">five vendors</em><br />
+      You shouldn't need <span class="teal hero__title-em">five vendors</span><br />
       to ship one regulated product.
     </h1>
     <p class="hero__sub lead">
@@ -2010,6 +2032,61 @@
   document.querySelectorAll('.prac-tab').forEach(tab => {
     tab.addEventListener('click', () => applyPractice(tab.dataset.practice));
   });
+
+  // Hero typewriter animation — types out the H1 on first page load
+  (function typewriter() {
+    const title = document.querySelector('.hero__title');
+    if (!title) return;
+    // Skip if user prefers reduced motion
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    // Only animate once per session
+    if (sessionStorage.getItem('tw-hero-played')) return;
+
+    // Walk DOM and split each text node into per-character spans
+    function processNode(node) {
+      if (node.nodeType === 3) {
+        const text = node.nodeValue;
+        if (!text) return;
+        const frag = document.createDocumentFragment();
+        for (const ch of text) {
+          const span = document.createElement('span');
+          span.className = 'tw-char';
+          span.textContent = ch;
+          frag.appendChild(span);
+        }
+        node.parentNode.replaceChild(frag, node);
+      } else if (node.nodeType === 1 && node.tagName !== 'BR') {
+        Array.from(node.childNodes).forEach(processNode);
+      }
+    }
+    Array.from(title.childNodes).forEach(processNode);
+    title.classList.add('tw-active');
+
+    const chars = title.querySelectorAll('.tw-char');
+    const cursor = document.createElement('span');
+    cursor.className = 'tw-cursor';
+    title.appendChild(cursor);
+
+    let i = 0;
+    function tick() {
+      if (i >= chars.length) {
+        setTimeout(() => title.classList.add('tw-done'), 900);
+        sessionStorage.setItem('tw-hero-played', '1');
+        return;
+      }
+      chars[i].classList.add('is-visible');
+      chars[i].after(cursor);
+      const ch = chars[i].textContent;
+      i++;
+      let delay = 65;
+      if (ch === '.' || ch === ',') delay = 380;
+      else if (ch === ' ') delay = 42;
+      else if (ch === '—' || ch === '-') delay = 180;
+      setTimeout(tick, delay);
+    }
+    setTimeout(tick, 500);
+  })();
 
   // Contact form — submits to Formspree (or whatever endpoint is set in the form's `action`)
   const form = document.querySelector('.ct-form');

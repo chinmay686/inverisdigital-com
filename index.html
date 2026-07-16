@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inveris Digital — The Life Sciences &amp; Healthcare Execution Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <meta name="description" content="Inveris Digital is the integrated execution partner for mid-market MedTech, HealthTech, and Pharma. One team, one SOW, one outcome — across strategy, regulated engineering, and AI." />
   <meta name="author" content="Inveris Digital, LLC" />
-  <meta name="theme-color" content="#0A1733" />
-  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#063A53" />
+  <meta name="color-scheme" content="light" />
   <link rel="canonical" href="https://inverisdigital.com/" />
 
   <!-- Open Graph -->
@@ -16,7 +19,7 @@
   <meta property="og:title" content="Inveris Digital — The Life Sciences &amp; Healthcare Execution Partner" />
   <meta property="og:description" content="One team, one SOW, one outcome. Strategy, productized IP, and regulated engineering for mid-market MedTech, HealthTech, and Pharma." />
   <meta property="og:url" content="https://inverisdigital.com/" />
-  <meta property="og:image" content="https://inverisdigital.com/og-image.png" />
+  <meta property="og:image" content="https://inverisdigital.com/og-image-v2.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
@@ -25,7 +28,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Inveris Digital — The Life Sciences &amp; Healthcare Execution Partner" />
   <meta name="twitter:description" content="One team, one SOW, one outcome. Strategy, productized IP, and regulated engineering for mid-market MedTech, HealthTech, and Pharma." />
-  <meta name="twitter:image" content="https://inverisdigital.com/og-image.png" />
+  <meta name="twitter:image" content="https://inverisdigital.com/og-image-v2.png" />
 
   <!-- Crawling -->
   <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -281,6 +284,273 @@
 .iris-cta-deep__actions .btn { justify-content: center; }
 @media (max-width: 768px) { .iris-cta-deep__card { grid-template-columns: 1fr; padding: var(--s-4); } }
 
+
+/* ================================================================
+   INVERIS DIGITAL REBRAND — override layer (v2 preview)
+   Appended after the original stylesheet. Original rules untouched;
+   everything below re-points them at the July 2026 brand kit.
+   ================================================================ */
+
+:root{
+  /* --- brand kit --- */
+  --ocean:#063A53; --lime:#DCEB73; --dteal:#0B4A52; --glass:#8CCDBA;
+  --carbon:#101315; --slate:#3D4752; --mist:#DBDFE1; --cloud:#F5F7F6;
+
+  /* --- semantic remap of the old dark tokens onto the light brand ---
+     The old site was dark-first: navy=page, navy-alt=card, ice=body text.
+     Remapping by ROLE (not by hue) carries most of the existing CSS across. */
+  --navy:         #F5F7F6;   /* page background   → Cloud   */
+  --navy-alt:     #FFFFFF;   /* card surface      → White   */
+  --navy-soft:    #F5F7F6;   /* hover surface     → Cloud   */
+  --navy-deeper:  #FFFFFF;   /* alt band          → White   */
+  --teal:         #0B4A52;   /* label / eyebrow   → Deep Teal */
+  --teal-bright:  #063A53;   /* emphasis          → Deep Ocean */
+  --teal-dim:     #8CCDBA;   /* soft accent       → Sea Glass */
+  --ice:          #3D4752;   /* body text         → Slate   */
+  --muted:        #3D4752;   /* secondary text    → Slate   */
+  --dim:          #3D4752;   /* tertiary text     → Slate   */
+  --white:        #101315;   /* heading text      → Carbon  */
+  --off-white:    #FFFFFF;
+  --border:       #DBDFE1;   /* rules             → Mist    */
+  --border-soft:  #DBDFE1;
+
+  --f-display:"Sora","Montserrat",Arial,sans-serif;
+  --f-body:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --f-mono:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif; /* brand has no mono face */
+  --nav-h:88px;
+}
+
+body{background:var(--cloud);color:var(--slate);font-family:var(--f-body)}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;color:var(--carbon)}
+h4{font-family:var(--f-display);font-weight:600;color:var(--carbon)}
+p.lead{font-family:var(--f-display);font-weight:400;color:var(--slate)}
+strong,b{color:var(--carbon)}
+::selection{background:var(--lime);color:var(--ocean)}
+
+/* eyebrow: Inter, not mono, + lime tick */
+.eyebrow{font-family:var(--f-body);font-weight:600;letter-spacing:.16em;color:var(--dteal);
+  display:inline-flex;align-items:center;gap:.6rem}
+.eyebrow:before{content:"";width:18px;height:2px;background:var(--lime);flex:none}
+
+/* the serif-italic emphasis device is retired — weight + colour instead */
+.serif-italic{font-family:var(--f-display);font-style:normal;font-weight:700}
+.teal{color:var(--ocean)}
+
+/* ---------- BUTTONS ---------- */
+.btn-primary{background:var(--ocean);color:var(--cloud);border-color:var(--ocean)}
+.btn-primary:hover{background:var(--dteal);border-color:var(--dteal)}
+.btn-ghost{color:var(--ocean);border-color:var(--mist);background:transparent}
+.btn-ghost:hover{border-color:var(--ocean);color:var(--ocean)}
+.btn-link{color:var(--ocean)}
+.btn-link:hover{color:var(--dteal)}
+
+/* ---------- DARK SURFACES: nav, hero, IRIS, CTA, footer ---------- */
+.nav{background:var(--ocean)!important;border-bottom:1px solid rgba(245,247,246,.12);backdrop-filter:none}
+.nav--scrolled{background:var(--ocean)!important;backdrop-filter:none;-webkit-backdrop-filter:none;
+  border-bottom-color:rgba(245,247,246,.12)}
+.nav__inner{gap:2rem}
+.nav__brand{flex:none}
+.nav__logo{height:32px;width:219px;flex:none}
+.nav__link{color:rgba(245,247,246,.82)}
+.nav__link:hover,.nav__link--active{color:#fff}
+.nav__link:after{background:var(--lime);height:2px}
+.nav__cta{background:var(--lime)!important;color:var(--ocean)!important;border-color:var(--lime)!important}
+.nav__cta:hover{background:#fff!important;border-color:#fff!important}
+.nav__links{background:var(--ocean);border-bottom-color:rgba(245,247,246,.12)}
+.nav__burger span{background:rgba(245,247,246,.82)}
+
+/* shared dark-band typography */
+.hero,.cta,.footer,.iris-featured,.iris-cta-deep{--_dark:1}
+.hero h1,.hero h2,.cta h1,.cta h2,.iris-featured h2,.iris-cta-deep h2{color:#fff}
+.hero p,.cta p,.iris-featured p{color:rgba(245,247,246,.82)}
+.hero .eyebrow,.cta .eyebrow,.iris-featured .eyebrow{color:var(--glass)}
+.hero strong,.cta strong,.iris-featured strong{color:#fff}
+.hero .teal,.cta .teal,.iris-featured .teal{color:var(--lime)}
+.hero .btn-primary,.cta .btn-primary,.iris-featured .btn-primary{
+  background:var(--lime);color:var(--ocean);border-color:var(--lime)}
+.hero .btn-primary:hover,.cta .btn-primary:hover,.iris-featured .btn-primary:hover{
+  background:#fff;border-color:#fff}
+.hero .btn-link,.cta .btn-link,.iris-featured .btn-link{color:var(--lime)}
+.hero .btn-link:hover,.cta .btn-link:hover,.iris-featured .btn-link:hover{color:#fff}
+
+/* HERO — Deep Ocean */
+.hero{background:var(--ocean)!important;min-height:calc(100vh - var(--nav-h))}
+.hero__meta{border-top:none;background:rgba(245,247,246,.14);border:1px solid rgba(245,247,246,.14);
+  gap:1px;display:grid;grid-template-columns:repeat(3,1fr)}
+.hero__stat{background:var(--dteal);padding:1.5rem 2rem}
+.hero__n{color:var(--lime);font-family:var(--f-display);font-weight:700}
+.hero__l{color:rgba(245,247,246,.72)}
+.bg-grid:before{background-image:linear-gradient(to right,rgba(245,247,246,.05) 1px,transparent 1px),
+  linear-gradient(to bottom,rgba(245,247,246,.05) 1px,transparent 1px)}
+
+/* CTA — Deep Ocean */
+.cta{background:var(--ocean)}
+.cta .lead{color:rgba(245,247,246,.82)}
+
+/* IRIS featured — Deep Teal large surface */
+.iris-featured{background:var(--dteal)!important}
+.iris-featured__bg{background:none!important}
+.iris-featured__lead,.iris-featured__sub{color:rgba(245,247,246,.82)!important}
+.iris-featured__n{color:var(--lime)!important;font-family:var(--f-display);font-weight:700}
+.iris-featured__l{color:rgba(245,247,246,.72)!important}
+.iris-featured__label{color:var(--glass)!important}
+.iris-featured__status{color:var(--lime)!important}
+.iris-featured__cite{color:#fff!important;border-left-color:var(--lime)!important;
+  font-family:var(--f-display);font-style:normal}
+.iris-featured__cite-src{color:rgba(245,247,246,.6)!important}
+.iris-featured__orb{background:radial-gradient(circle at 32% 30%,var(--glass),rgba(140,205,186,.35) 58%,transparent 78%)!important;
+  box-shadow:0 0 90px rgba(140,205,186,.28)!important}
+.iris-featured__pulse{border-color:var(--lime)!important}
+.iris-featured__rings{border-color:rgba(140,205,186,.3)!important}
+
+/* FOOTER — Deep Ocean */
+.footer{background:var(--ocean)!important;border-top:1px solid rgba(245,247,246,.12)}
+.footer__wordmark{color:#fff}
+.footer__logo{height:30px;width:205px;margin-bottom:1rem}
+.footer__tag{color:rgba(245,247,246,.66)!important}
+.footer__heading{color:var(--glass)!important;font-family:var(--f-body);letter-spacing:.16em}
+.footer__link{color:rgba(245,247,246,.8)!important}
+.footer__link:hover{color:var(--lime)!important}
+.footer__link .ext{color:rgba(245,247,246,.5)!important}
+.footer__addr{color:rgba(245,247,246,.66)!important}
+.footer__bottom{border-top:1px solid rgba(245,247,246,.12)}
+.footer__copy,.footer__meta{color:rgba(245,247,246,.62)!important;font-family:var(--f-body)}
+
+/* ---------- LIGHT SURFACES: cards, rules, accents ---------- */
+.practice-card,.friction__card,.vchain__card,.iris-caps__card,.other-accs__card,
+.svc-stage__right,.ct-form-wrap,.ct-direct,.ins-close,.iris-outcomes{
+  background:#fff;border-color:var(--mist)}
+.practice-card:hover,.friction__card:hover,.iris-caps__card:hover,.other-accs__card:hover{
+  border-color:var(--glass);box-shadow:0 12px 32px rgba(6,58,83,.09)}
+.vchain__card:hover{background:var(--cloud);border-color:var(--glass)}
+.vchain__card:before{background:var(--lime)}
+.vchain__signature{color:var(--ocean);border-top-color:var(--mist)}
+.vchain__star{color:var(--glass)}
+.vchain__arrow{color:var(--mist)}
+.vchain__card:hover .vchain__arrow{color:var(--ocean)}
+.vchain__num,.friction__num,.iris-caps__num,.other-accs__n,.ct-steps__n{
+  color:var(--dteal);font-family:var(--f-body);font-weight:700}
+.friction__out{border-left:3px solid var(--lime);color:var(--carbon);font-family:var(--f-display)}
+.friction__out .teal{color:var(--ocean)}
+.hairline{background:var(--mist)}
+
+/* citations */
+.cite{border-left:2px solid var(--glass)}
+.cite__claim{color:var(--slate)}
+.cite__src{color:var(--slate);opacity:1}
+
+/* practice cards */
+.practice-card--primary:before{background:var(--lime)}
+.practice-card__badge{background:var(--ocean);color:var(--cloud)}
+.practice-card__badge--adj{background:transparent;color:var(--slate);border:1px solid var(--mist)}
+.practice-card__tag{color:var(--carbon);font-family:var(--f-display)}
+
+/* services page */
+.svc-jump-wrap{background:var(--cloud);backdrop-filter:none;-webkit-backdrop-filter:none;
+  border-bottom:1px solid var(--mist)}
+.svc-jump__item{color:var(--slate);border-right-color:var(--mist)}
+.svc-jump__item:first-child{border-left-color:var(--mist)}
+.svc-jump__item:hover{color:var(--ocean);background:rgba(140,205,186,.14)}
+.svc-jump__num{color:var(--dteal);font-family:var(--f-body);font-weight:700}
+.svc-stage--alt{background:#fff}
+.svc-stage+.svc-stage{border-top-color:var(--mist)}
+.svc-stage__num{color:var(--mist);font-family:var(--f-display);font-weight:700;opacity:1}
+.svc-stage__tag{color:var(--slate);font-family:var(--f-display)}
+.svc-stage__label{color:var(--dteal);font-family:var(--f-body);letter-spacing:.16em}
+.svc-stage__cxo{color:var(--carbon)}
+.svc-stage__sig{background:var(--cloud);border-left:2px solid var(--lime)}
+.svc-stage__star{color:var(--glass)}
+.svc-stage__sig-name{color:var(--carbon)}
+.svc-stage__sig-blurb{color:var(--slate)}
+.svc-stage__outcomes li{color:var(--slate)}
+.svc-stage__outcomes li:before{color:var(--glass)}
+.svc-stage__svc{color:var(--slate)}
+.svc-stage__svc:hover{background:rgba(140,205,186,.14);border-left-color:var(--glass);color:var(--carbon)}
+.svc-stage__svc--signature{background:rgba(220,235,115,.28);border-left-color:var(--lime)!important;color:var(--carbon)}
+.svc-stage__svc--signature .svc-stage__svc-dot{color:var(--dteal)}
+.svc-stage__svc-dot{color:var(--slate)}
+.svc-stage__pain{color:var(--slate);font-style:normal;border-top-color:var(--mist)}
+.prac-tab{color:var(--slate);border-color:var(--mist)}
+.prac-tab--active{background:var(--ocean);color:var(--cloud);border-color:var(--ocean)}
+
+/* products / IRIS deep pages */
+.iris-outcomes{border-left:3px solid var(--lime)}
+.iris-outcomes__n{color:var(--ocean);font-family:var(--f-display);font-weight:700}
+.iris-outcomes__l{color:var(--slate)}
+.iris-cta{background:var(--cloud);border:1px solid var(--mist);border-left:3px solid var(--lime)}
+.other-accs{background:#fff}
+.other-accs__stage{color:var(--ocean);background:rgba(220,235,115,.4)}
+.iris__orb{background:radial-gradient(circle at 30% 30%,var(--glass),rgba(140,205,186,.35) 60%,transparent 80%)!important;
+  box-shadow:0 0 80px rgba(140,205,186,.28)!important}
+.iris__pulse{border-color:var(--lime)}
+.iris__card:before{background:var(--lime)}
+.iris__lines span{background:linear-gradient(to right,transparent,var(--glass),transparent)}
+.iris__label{color:var(--dteal)}
+.iris__status{color:var(--ocean)}
+
+/* insights */
+.ins-card{border-top-color:var(--mist)}
+.ins-card__tag{color:var(--dteal);border-color:var(--glass)}
+.ins-card__date{color:var(--slate)}
+.ins-card__dek{color:var(--slate);border-left:2px solid var(--lime);font-family:var(--f-display)}
+.ins-card__body p{color:var(--slate)}
+.ins-card__body p:first-of-type:first-letter{font-family:var(--f-display);font-weight:700;color:var(--ocean)}
+.ins-close{border-left:3px solid var(--lime)}
+
+/* contact form */
+.ct-form input,.ct-form select,.ct-form textarea{
+  background:var(--cloud);border:1px solid var(--mist);color:var(--carbon)}
+.ct-form input:focus,.ct-form select:focus,.ct-form textarea:focus{border-color:var(--ocean);outline:2px solid rgba(6,58,83,.15)}
+.ct-form label>span{color:var(--slate);font-family:var(--f-body);letter-spacing:.14em}
+.ct-form select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'><path d='M2 4l4 4 4-4' stroke='%233D4752' stroke-width='1.5' fill='none'/></svg>")}
+.ct-direct{border-left:2px solid var(--lime)}
+.ct-direct__email{color:var(--ocean);font-family:var(--f-body);font-weight:600}
+.ct-direct__email:hover{color:var(--dteal)}
+.ct-steps li strong{color:var(--carbon)}
+.ct-steps li p{color:var(--slate)}
+.ct-privacy{color:var(--slate)}
+.ct-success p{color:var(--slate)}
+
+/* leftover accent washes from the retired palette */
+.iris-featured__stats{border-top:1px solid rgba(245,247,246,.18);border-bottom:1px solid rgba(245,247,246,.18)}
+
+
+/* ---- final sweep: rules still holding retired navy / teal / amber ---- */
+
+/* the retired AMBER (#F5B041) survived here — brand has no amber.
+   External/third-party callout re-cast in Sea Glass. */
+.iris-arch__external{background:rgba(140,205,186,.14);border-left:2px solid var(--glass);color:var(--slate)}
+.iris-arch__external-label{color:var(--dteal);font-family:var(--f-body);font-weight:600;letter-spacing:.16em}
+
+/* teal washes → lime (price is a key metric) / sea glass (structure) */
+.iris-track__price{color:var(--ocean);background:rgba(220,235,115,.45);font-family:var(--f-body);font-weight:600}
+.iris-arch__node--core{background:rgba(220,235,115,.3);border-color:var(--lime);color:var(--carbon)}
+.iris-cta-deep__card{background:var(--cloud);border:1px solid var(--mist);border-left:3px solid var(--lime)}
+.iris-cta-deep{background:var(--ocean)}
+.iris-cta-deep__card h2,.iris-cta-deep__card h3{color:var(--carbon)}
+.iris-cta-deep__card p{color:var(--slate)}
+
+/* services practice filter — was navy@90% + blur over a dark page */
+.prac-filter{background:var(--cloud);backdrop-filter:none;-webkit-backdrop-filter:none;
+  border-bottom:1px solid var(--mist)}
+
+/* teal hover washes → sea glass */
+.svc-jump__item:hover,.svc-stage__svc:hover{background:rgba(140,205,186,.14)}
+.practice-card__badge{background:var(--ocean)}
+.practice-card__badge--adj{background:transparent;border:1px solid var(--mist)}
+.iris-featured__bg{display:none}
+.iris-featured__cite{background:transparent}
+.iris-cta{background:var(--cloud)}
+
+/* deep-page heroes sit on light ground, not the old navy */
+.prod-hero,.iris-deep-hero,.svc-hero,.ins-hero,.ct-hero{background:var(--cloud)}
+.prod-hero.bg-grid:before,.iris-deep-hero.bg-grid:before{
+  background-image:linear-gradient(to right,rgba(6,58,83,.06) 1px,transparent 1px),
+                   linear-gradient(to bottom,rgba(6,58,83,.06) 1px,transparent 1px)}
+
+
+/* shorthand `border` in the original — override the shorthand, not just border-color */
+.iris-featured__rings{border:1px solid rgba(140,205,186,.3)!important}
 </style>
 </head>
 <body>
@@ -288,7 +558,28 @@
 <header class="nav">
   <div class="nav__inner container">
     <a href="#" data-page-link="home" class="nav__brand" aria-label="Inveris Digital — home">
-      <span class="nav__logo-wrap"><svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 88" preserveAspectRatio="xMinYMid meet"><defs><linearGradient id="rev_navy" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0%" stop-color="#4DB6AC"/><stop offset="100%" stop-color="#80CBC4"/></linearGradient><linearGradient id="rev_teal" x1="0" y1="0" x2="1" y2="0.8"><stop offset="0%" stop-color="#26A69A"/><stop offset="100%" stop-color="#4DB6AC"/></linearGradient><linearGradient id="rev_amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F5B041"/><stop offset="100%" stop-color="#F9D088"/></linearGradient></defs><circle cx="28" cy="12" r="5.8" fill="url(#rev_navy)"/><path d="M25.5 17.5 L25.5 36 Q25.5 38 27 39 L30.5 39 Q30.5 38 30.5 36 L30.5 17.5 Z" fill="url(#rev_navy)"/><path d="M27 36 L16.5 42" stroke="url(#rev_navy)" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="14.5" cy="43.5" r="4.2" fill="url(#rev_navy)"/><path d="M29 34 L41 26" stroke="url(#rev_navy)" stroke-width="3.8" stroke-linecap="round" fill="none"/><circle cx="42.5" cy="24.5" r="3.8" fill="url(#rev_amber)"/><rect x="23" y="39" width="6" height="27" rx="3" fill="url(#rev_navy)"/><path d="M42 16 L54 16 C64 16 72 20 77 28 C81 34 81 42 81 46 C81 50 81 58 77 64 C72 72 64 76 54 76 L42 76 Z" fill="url(#rev_teal)"/><path d="M50 28 L55 28 C60 28 64 31 66 36 C67.5 39 67.5 43 67.5 46 C67.5 49 67.5 53 66 56 C64 61 60 64 55 64 L50 64 Z" fill="#0A1733"/><polyline points="53.5,48 57.8,53.5 66.5,40" fill="none" stroke="url(#rev_amber)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><text x="94" y="56" font-family="'Segoe UI','Helvetica Neue',Arial,system-ui,sans-serif" font-size="26" letter-spacing="-0.3"><tspan font-weight="400" fill="#F0F0F2">Inveris</tspan><tspan font-weight="700" fill="#4DB6AC">Digital</tspan></text></svg></span>
+      <span class="nav__logo-wrap"><svg class="nav__logo" xmlns="http://www.w3.org/2000/svg" viewBox="277.7 440.2 1364.6 199.5" width="219" height="32" role="img" aria-label="Inveris Digital"><polygon fill="#dceb73" points="335.3 498.05 357.49 498.03 357.49 469.22 306.53 469.18 306.53 605.88 357.48 605.77 357.5 576.97 335.29 576.84 335.3 498.05"/>
+  <path fill="#dceb73" d="M386.32,468.98l.02,29.23c22.33-.02,39.68,18.07,39.46,39.66-.22,21.38-17.38,38.82-39.49,39.03v29.14c38.45.2,68.97-31.25,68.77-68.93-.2-37.34-30.63-68.3-68.77-68.12Z"/>
+  <rect fill="#dceb73" x="277.69" y="440.23" width="28.77" height="28.77"/>
+  <rect fill="#dceb73" x="442.17" y="577.72" width="28.77" height="28.77"/>
+  <rect fill="#fff" x="565.4" y="458.29" width="25.04" height="140.22"/>
+  <polygon fill="#fff" points="752.89 566.26 728.45 496.34 702.61 496.34 740.47 598.51 765.31 598.51 803.17 496.34 777.33 496.34 752.89 566.26"/>
+  <path fill="#fff" d="M856.26,496.95c-31.05,0-51.88,20.63-51.88,51.48s20.83,51.88,51.88,51.88c24.24,0,42.07-12.62,48.68-32.85h-26.24c-4.81,7.01-12.62,10.82-22.64,10.82-14.22,0-24.24-8.01-26.84-21.83h78.32c.2-2.6.4-5.21.4-8.01,0-30.85-20.63-51.48-51.68-51.48ZM831.02,534.41c4.21-9.82,13.22-15.42,25.04-15.42s21.03,5.61,25.24,15.42h-50.28Z"/>
+  <path fill="#fff" d="M921.16,542.42v56.09h24.04v-56.09c0-16.03,9.62-23.84,25.64-23.84v-22.03c-30.45,0-49.68,15.42-49.68,45.87Z"/>
+  <path fill="#fff" d="M1046.76,525.39c0-4.01,4.21-6.61,12.02-6.61,8.21,0,18.63,3,29.25,11.82l12.82-18.63c-8.81-7.21-21.83-15.22-41.67-15.22-22.64,0-36.46,10.62-36.46,29.05,0,36.66,54.49,26.04,54.49,43.27,0,5.81-6.21,8.61-14.42,8.61-9.82,0-20.43-4.01-28.85-12.02l-12.82,18.83c6.21,5.61,19.83,15.22,41.06,15.22,22.84,0,39.06-11.02,39.06-31.45,0-37.46-54.49-28.24-54.49-42.87Z"/>
+  <rect fill="#fff" x="606.46" y="559.91" width="24.04" height="38.59"/>
+  <path fill="#fff" d="M652.53,496.55c-30.26,0-43.72,20.82-45.78,37.71h24.26c2.22-10.62,11.42-15.47,21.52-15.47,11.62,0,22.03,6.41,22.03,20.63v59.09h24.04v-59.69c0-17.43-13.02-42.27-46.07-42.27Z"/>
+  <rect fill="#fff" x="984.06" y="496.38" width="24.04" height="102.17"/>
+  <rect fill="#fff" x="984.06" y="458.24" width="24.04" height="24.04"/>
+  <path fill="#dceb73" d="M1166.75,458.29h-53.08v140.22h53.08c41.67,0,67.51-27.64,67.51-70.91s-25.84-69.31-67.51-69.31ZM1164.35,575.47h-25.64v-94.15h25.64c28.04,0,44.87,18.43,44.87,47.47s-16.83,46.67-44.87,46.67Z"/>
+  <path fill="#dceb73" d="M1465.23,552.23l.19-33.86h22.84v-22.03h-22.84l-.19-38.05h-24.04v94.15c0,30.85,17.43,47.48,50.28,47.48v-22.04c-18.83,0-26.24-7.41-26.24-25.64Z"/>
+  <rect fill="#dceb73" x="1618.27" y="458.29" width="24.04" height="140.22"/>
+  <rect fill="#dceb73" x="1247.28" y="496.34" width="24.04" height="102.17"/>
+  <rect fill="#dceb73" x="1247.28" y="458.2" width="24.04" height="24.04"/>
+  <rect fill="#dceb73" x="1401.78" y="496.34" width="24.04" height="102.17"/>
+  <rect fill="#dceb73" x="1401.78" y="458.2" width="24.04" height="24.04"/>
+  <path fill="#dceb73" d="M1578.2,503.83c-7.8-4.45-17.23-6.89-27.84-6.89-30.85,0-51.68,20.63-51.68,51.48s20.83,51.88,49.88,51.88c14.62,0,24.84-5.21,29.65-11.42v9.62h24.04v-102.17h-24.04v7.49ZM1550.56,578.27c-16.83,0-27.84-11.02-27.84-29.65s11.02-29.65,27.84-29.65,27.64,11.02,27.64,29.65-11.02,29.65-27.64,29.65Z"/>
+  <path fill="#dceb73" d="M1362.86,503.63c-7.8-4.45-17.23-6.89-27.84-6.89-30.85,0-51.68,20.63-51.68,51.48s20.83,51.88,49.88,51.88c14.62,0,24.84-5.21,29.65-11.42v5.81c0,1.53-.14,3-.37,4.43-.58,3.49-1.86,6.64-3.81,9.33-3.78,5.93-10,10.01-19.7,10.01h-48.78v21.49h46.05c.19,0,.37.02.56.02.26,0,.51-.01.77-.02h1.76c12.53,0,22.48-3.57,29.98-9.56.98-.78,1.9-1.62,2.8-2.48.98-.95,1.93-1.92,2.81-2.96,1.03-1.21,1.98-2.48,2.88-3.8.08-.12.18-.24.26-.37.26-.4.51-.81.76-1.22.21-.34.43-.67.63-1.01.22-.37.41-.76.62-1.14.22-.39.44-.78.65-1.18.32-.62.61-1.26.91-1.9.08-.17.17-.33.24-.5.27-.6.51-1.21.76-1.83.09-.22.19-.43.27-.65.25-.65.48-1.31.71-1.97.07-.2.14-.39.21-.58.51-1.54.95-3.13,1.34-4.74.05-.19.1-.38.14-.57.17-.74.32-1.49.46-2.25.03-.17.07-.33.1-.5.51-2.77.85-5.62,1.02-8.53h0v-95.68h-24.04v7.29ZM1335.22,578.07c-16.83,0-27.84-11.02-27.84-29.65s11.02-29.65,27.84-29.65,27.64,11.02,27.64,29.65-11.02,29.65-27.64,29.65Z"/></svg></span>
     </a>
     <nav class="nav__links">
       <a href="#" data-page-link="services" class="nav__link">Services</a>
@@ -1902,7 +2193,28 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 88" preserveAspectRatio="xMinYMid meet"><defs><linearGradient id="rev_navy" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0%" stop-color="#4DB6AC"/><stop offset="100%" stop-color="#80CBC4"/></linearGradient><linearGradient id="rev_teal" x1="0" y1="0" x2="1" y2="0.8"><stop offset="0%" stop-color="#26A69A"/><stop offset="100%" stop-color="#4DB6AC"/></linearGradient><linearGradient id="rev_amber" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F5B041"/><stop offset="100%" stop-color="#F9D088"/></linearGradient></defs><circle cx="28" cy="12" r="5.8" fill="url(#rev_navy)"/><path d="M25.5 17.5 L25.5 36 Q25.5 38 27 39 L30.5 39 Q30.5 38 30.5 36 L30.5 17.5 Z" fill="url(#rev_navy)"/><path d="M27 36 L16.5 42" stroke="url(#rev_navy)" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="14.5" cy="43.5" r="4.2" fill="url(#rev_navy)"/><path d="M29 34 L41 26" stroke="url(#rev_navy)" stroke-width="3.8" stroke-linecap="round" fill="none"/><circle cx="42.5" cy="24.5" r="3.8" fill="url(#rev_amber)"/><rect x="23" y="39" width="6" height="27" rx="3" fill="url(#rev_navy)"/><path d="M42 16 L54 16 C64 16 72 20 77 28 C81 34 81 42 81 46 C81 50 81 58 77 64 C72 72 64 76 54 76 L42 76 Z" fill="url(#rev_teal)"/><path d="M50 28 L55 28 C60 28 64 31 66 36 C67.5 39 67.5 43 67.5 46 C67.5 49 67.5 53 66 56 C64 61 60 64 55 64 L50 64 Z" fill="#0A1733"/><polyline points="53.5,48 57.8,53.5 66.5,40" fill="none" stroke="url(#rev_amber)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><text x="94" y="56" font-family="'Segoe UI','Helvetica Neue',Arial,system-ui,sans-serif" font-size="26" letter-spacing="-0.3"><tspan font-weight="400" fill="#F0F0F2">Inveris</tspan><tspan font-weight="700" fill="#4DB6AC">Digital</tspan></text></svg>
+        <svg class="footer__logo" xmlns="http://www.w3.org/2000/svg" viewBox="277.7 440.2 1364.6 199.5" width="205" height="30" role="img" aria-label="Inveris Digital"><polygon fill="#dceb73" points="335.3 498.05 357.49 498.03 357.49 469.22 306.53 469.18 306.53 605.88 357.48 605.77 357.5 576.97 335.29 576.84 335.3 498.05"/>
+  <path fill="#dceb73" d="M386.32,468.98l.02,29.23c22.33-.02,39.68,18.07,39.46,39.66-.22,21.38-17.38,38.82-39.49,39.03v29.14c38.45.2,68.97-31.25,68.77-68.93-.2-37.34-30.63-68.3-68.77-68.12Z"/>
+  <rect fill="#dceb73" x="277.69" y="440.23" width="28.77" height="28.77"/>
+  <rect fill="#dceb73" x="442.17" y="577.72" width="28.77" height="28.77"/>
+  <rect fill="#fff" x="565.4" y="458.29" width="25.04" height="140.22"/>
+  <polygon fill="#fff" points="752.89 566.26 728.45 496.34 702.61 496.34 740.47 598.51 765.31 598.51 803.17 496.34 777.33 496.34 752.89 566.26"/>
+  <path fill="#fff" d="M856.26,496.95c-31.05,0-51.88,20.63-51.88,51.48s20.83,51.88,51.88,51.88c24.24,0,42.07-12.62,48.68-32.85h-26.24c-4.81,7.01-12.62,10.82-22.64,10.82-14.22,0-24.24-8.01-26.84-21.83h78.32c.2-2.6.4-5.21.4-8.01,0-30.85-20.63-51.48-51.68-51.48ZM831.02,534.41c4.21-9.82,13.22-15.42,25.04-15.42s21.03,5.61,25.24,15.42h-50.28Z"/>
+  <path fill="#fff" d="M921.16,542.42v56.09h24.04v-56.09c0-16.03,9.62-23.84,25.64-23.84v-22.03c-30.45,0-49.68,15.42-49.68,45.87Z"/>
+  <path fill="#fff" d="M1046.76,525.39c0-4.01,4.21-6.61,12.02-6.61,8.21,0,18.63,3,29.25,11.82l12.82-18.63c-8.81-7.21-21.83-15.22-41.67-15.22-22.64,0-36.46,10.62-36.46,29.05,0,36.66,54.49,26.04,54.49,43.27,0,5.81-6.21,8.61-14.42,8.61-9.82,0-20.43-4.01-28.85-12.02l-12.82,18.83c6.21,5.61,19.83,15.22,41.06,15.22,22.84,0,39.06-11.02,39.06-31.45,0-37.46-54.49-28.24-54.49-42.87Z"/>
+  <rect fill="#fff" x="606.46" y="559.91" width="24.04" height="38.59"/>
+  <path fill="#fff" d="M652.53,496.55c-30.26,0-43.72,20.82-45.78,37.71h24.26c2.22-10.62,11.42-15.47,21.52-15.47,11.62,0,22.03,6.41,22.03,20.63v59.09h24.04v-59.69c0-17.43-13.02-42.27-46.07-42.27Z"/>
+  <rect fill="#fff" x="984.06" y="496.38" width="24.04" height="102.17"/>
+  <rect fill="#fff" x="984.06" y="458.24" width="24.04" height="24.04"/>
+  <path fill="#dceb73" d="M1166.75,458.29h-53.08v140.22h53.08c41.67,0,67.51-27.64,67.51-70.91s-25.84-69.31-67.51-69.31ZM1164.35,575.47h-25.64v-94.15h25.64c28.04,0,44.87,18.43,44.87,47.47s-16.83,46.67-44.87,46.67Z"/>
+  <path fill="#dceb73" d="M1465.23,552.23l.19-33.86h22.84v-22.03h-22.84l-.19-38.05h-24.04v94.15c0,30.85,17.43,47.48,50.28,47.48v-22.04c-18.83,0-26.24-7.41-26.24-25.64Z"/>
+  <rect fill="#dceb73" x="1618.27" y="458.29" width="24.04" height="140.22"/>
+  <rect fill="#dceb73" x="1247.28" y="496.34" width="24.04" height="102.17"/>
+  <rect fill="#dceb73" x="1247.28" y="458.2" width="24.04" height="24.04"/>
+  <rect fill="#dceb73" x="1401.78" y="496.34" width="24.04" height="102.17"/>
+  <rect fill="#dceb73" x="1401.78" y="458.2" width="24.04" height="24.04"/>
+  <path fill="#dceb73" d="M1578.2,503.83c-7.8-4.45-17.23-6.89-27.84-6.89-30.85,0-51.68,20.63-51.68,51.48s20.83,51.88,49.88,51.88c14.62,0,24.84-5.21,29.65-11.42v9.62h24.04v-102.17h-24.04v7.49ZM1550.56,578.27c-16.83,0-27.84-11.02-27.84-29.65s11.02-29.65,27.84-29.65,27.64,11.02,27.64,29.65-11.02,29.65-27.64,29.65Z"/>
+  <path fill="#dceb73" d="M1362.86,503.63c-7.8-4.45-17.23-6.89-27.84-6.89-30.85,0-51.68,20.63-51.68,51.48s20.83,51.88,49.88,51.88c14.62,0,24.84-5.21,29.65-11.42v5.81c0,1.53-.14,3-.37,4.43-.58,3.49-1.86,6.64-3.81,9.33-3.78,5.93-10,10.01-19.7,10.01h-48.78v21.49h46.05c.19,0,.37.02.56.02.26,0,.51-.01.77-.02h1.76c12.53,0,22.48-3.57,29.98-9.56.98-.78,1.9-1.62,2.8-2.48.98-.95,1.93-1.92,2.81-2.96,1.03-1.21,1.98-2.48,2.88-3.8.08-.12.18-.24.26-.37.26-.4.51-.81.76-1.22.21-.34.43-.67.63-1.01.22-.37.41-.76.62-1.14.22-.39.44-.78.65-1.18.32-.62.61-1.26.91-1.9.08-.17.17-.33.24-.5.27-.6.51-1.21.76-1.83.09-.22.19-.43.27-.65.25-.65.48-1.31.71-1.97.07-.2.14-.39.21-.58.51-1.54.95-3.13,1.34-4.74.05-.19.1-.38.14-.57.17-.74.32-1.49.46-2.25.03-.17.07-.33.1-.5.51-2.77.85-5.62,1.02-8.53h0v-95.68h-24.04v7.29ZM1335.22,578.07c-16.83,0-27.84-11.02-27.84-29.65s11.02-29.65,27.84-29.65,27.64,11.02,27.64,29.65-11.02,29.65-27.64,29.65Z"/></svg>
         <p class="footer__tag serif-italic">The Insight to Imagine. The Platform to Solve.</p>
       </div>
       <div class="footer__col">

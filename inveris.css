@@ -44,7 +44,19 @@ em{font-style:italic}
 .nav__links a.active{color:#fff}
 .nav__cta{padding:.6rem 1.15rem;font-size:.9rem}
 .nav__links a.nav__cta,.nav__links a.nav__cta:hover{color:var(--ocean)}
-@media(max-width:820px){.nav__links a:not(.nav__cta){display:none}}
+.nav__toggle{display:none}
+.nav__burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:34px;height:34px;cursor:pointer}
+.nav__burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .2s var(--ease),opacity .2s var(--ease)}
+@media(max-width:820px){
+  .nav__burger{display:flex}
+  .nav__links{position:fixed;top:var(--nav-h);left:0;right:0;background:var(--ocean);border-bottom:1px solid rgba(245,247,246,.12);flex-direction:column;align-items:stretch;gap:0;padding:6px 28px 18px;transform:translateY(-10px);opacity:0;pointer-events:none;transition:opacity .2s var(--ease),transform .2s var(--ease)}
+  .nav__links a{padding:14px 0;font-size:1rem;border-bottom:1px solid rgba(245,247,246,.08)}
+  .nav__links a.nav__cta{margin-top:12px;justify-content:center;border-bottom:none;padding:.75rem 1.15rem}
+  .nav__toggle:checked ~ .nav__links{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav__toggle:checked ~ .nav__burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav__toggle:checked ~ .nav__burger span:nth-child(2){opacity:0}
+  .nav__toggle:checked ~ .nav__burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
 main{padding-top:var(--nav-h)}
 
 /* page hero (interior pages) */
@@ -167,7 +179,7 @@ main{padding-top:var(--nav-h)}
 .form{background:#fff;border:1px solid var(--mist);border-radius:12px;padding:24px}
 .form label{display:block;margin-bottom:14px}
 .form label span{display:block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}
-.form input,.form select,.form textarea{width:100%;background:var(--cloud);border:1px solid var(--mist);border-radius:4px;padding:.7rem .85rem;font-family:var(--f-body);font-size:.96rem;color:var(--carbon)}
+.form input,.form select,.form textarea{width:100%;background:var(--cloud);border:1px solid var(--mist);border-radius:4px;padding:.7rem .85rem;font-family:var(--f-body);font-size:16px;color:var(--carbon)}
 .form input:focus,.form select:focus,.form textarea:focus{outline:2px solid rgba(6,58,83,.18);border-color:var(--ocean)}
 .form textarea{resize:vertical;min-height:110px;line-height:1.5}
 .form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}

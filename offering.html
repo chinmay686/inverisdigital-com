@@ -80,13 +80,49 @@
       <div class="kicker">What your peers are working on</div>
       <h2 class="h2">Six problems running in life sciences right now.</h2>
       <p class="lead">No client names and no case studies. These are the situations we see repeatedly across regulated MedTech, and the form the work takes when IRIS is pointed at one of them.</p>
-      <div class="offers" style="grid-template-columns:1fr 1fr">
-        <div class="offer"><div class="offer__top"><span class="offer__lbl">Commercial</span></div><h3>Read the payer logic out of the platform that runs it</h3><p>Twenty years of claims and contract rules; the two analysts who understand it are the two keeping it running. Out: an auditable specification of how the rules actually resolve, so the processing path can be automated against rules somebody has verified.</p></div>
-        <div class="offer offer--lead"><div class="offer__top"><span class="offer__lbl">Regulatory &amp; V&amp;V</span><span class="offer__badge">LEAD</span></div><h3>Write FDA-ready documentation from the firmware that ships</h3><p>A submission waiting on design rationale that lives in two engineers. Out: DHF content, hazard analysis, FMEA and traceability with provenance &mdash; and traceability that stays live as the code changes.</p></div>
-        <div class="offer"><div class="offer__top"><span class="offer__lbl">Modernisation</span></div><h3>Delete the discovery phase of an ERP migration</h3><p>Fifty-plus bolt-ons, a handful of analysts, a multi-year programme resting on an as-is nobody has written down. Out: a documented as-is and fit-gap input in weeks, that stays current through the programme.</p></div>
-        <div class="offer offer--lead"><div class="offer__top"><span class="offer__lbl">Quality &amp; compliance</span><span class="offer__badge">LEAD</span></div><h3>Make the quality system explainable before an investigator asks</h3><p>QMSR is in its first inspection cycle. Deviation routing and CAPA escalation live in code and in precedent, not in documents. Out: documented decision logic with provenance, and an audit response assembled in days.</p></div>
-        <div class="offer"><div class="offer__top"><span class="offer__lbl">M&amp;A and carve-outs</span></div><h3>Understand an acquired platform before the people leave</h3><p>Post-close, orphaned systems, and the team that understood them outside the org chart within twelve months. Out: what it does, what it commits you to, and what breaks if you switch it off.</p></div>
-        <div class="offer"><div class="offer__top"><span class="offer__lbl">Key-person risk</span></div><h3>Capture a retiring expert while they are still here</h3><p>One person holds fifteen years of system logic, with exactly one point of access, and it is leaving. Out: a successor onboarded in weeks, and a dependency that stops being a board-level risk.</p></div>
+      <div class="shapes">
+        <div class="shape">
+          <div class="shape__n">Commercial</div>
+          <h3>Read the payer logic out of the platform that runs it</h3>
+          <div class="shape__row"><i>The situation</i><span>Twenty years of claims and contract rules inside a billing platform. The two analysts who understand it are the same two keeping it running in production.</span></div>
+          <div class="shape__row"><i>Pointed at</i><span>The source, the modification specs, and the analysts &mdash; in their own language.</span></div>
+          <div class="shape__out"><span class="l">An auditable specification of how the rules actually resolve &mdash; so the processing path can be automated against rules somebody has verified, and defended when the pricing is questioned.</span></div>
+        </div>
+        <div class="shape shape--lead">
+          <div class="shape__n">Regulatory &amp; V&amp;V<span class="shape__lead">Lead</span></div>
+          <h3>Write FDA-ready documentation from the firmware that ships</h3>
+          <div class="shape__row"><i>The situation</i><span>A submission waiting on design rationale that exists in two engineers and nowhere else.</span></div>
+          <div class="shape__row"><i>Pointed at</i><span>Device software, the existing design files, and the engineers who wrote them.</span></div>
+          <div class="shape__out"><span class="l">DHF content, hazard analysis, FMEA and traceability with provenance on every line &mdash; and traceability that stays live as the code changes.</span></div>
+        </div>
+        <div class="shape">
+          <div class="shape__n">Modernisation</div>
+          <h3>Delete the discovery phase of an ERP migration</h3>
+          <div class="shape__row"><i>The situation</i><span>Fifty-plus bolt-on applications around a two-decade-old instance, a handful of business analysts, and a multi-year programme resting on an as-is nobody has written down.</span></div>
+          <div class="shape__row"><i>Pointed at</i><span>Bolt-on codebases &mdash; RPG, COBOL, Java, PL/SQL &mdash; reconciled against the modification specs, plus the base-configuration knowledge only the analyst holds.</span></div>
+          <div class="shape__out"><span class="l">A documented as-is and fit-gap input in weeks rather than months of workshops &mdash; and an as-is that stays current through the programme instead of ageing out in month four.</span></div>
+        </div>
+        <div class="shape shape--lead">
+          <div class="shape__n">Quality &amp; compliance<span class="shape__lead">Lead</span></div>
+          <h3>Make the quality system explainable before an investigator asks</h3>
+          <div class="shape__row"><i>The situation</i><span>QMSR is in its first inspection cycle. Deviation routing and CAPA escalation live in code and in precedent, not in documents.</span></div>
+          <div class="shape__row"><i>Pointed at</i><span>The quality systems, the workflow logic, and the QA veterans who apply the precedent.</span></div>
+          <div class="shape__out"><span class="l">Documented decision logic with provenance &mdash; continuous gap analysis instead of a pre-audit scramble, and an audit response assembled in days.</span></div>
+        </div>
+        <div class="shape">
+          <div class="shape__n">M&amp;A and carve-outs</div>
+          <h3>Understand an acquired platform before the people leave</h3>
+          <div class="shape__row"><i>The situation</i><span>Post-close, orphaned systems, and the team that understood them falls outside the org chart within twelve months.</span></div>
+          <div class="shape__row"><i>Pointed at</i><span>The inherited estate and the parent&rsquo;s experts, while they are still reachable.</span></div>
+          <div class="shape__out"><span class="l">What it does, what it commits you to, and what breaks if you switch it off &mdash; so retire, replicate or rewrite is decided per module rather than assumed for the estate.</span></div>
+        </div>
+        <div class="shape">
+          <div class="shape__n">Key-person risk</div>
+          <h3>Capture a retiring expert while they are still here</h3>
+          <div class="shape__row"><i>The situation</i><span>One person holds fifteen years of system logic. The knowledge still exists &mdash; it has exactly one point of access, and it is leaving.</span></div>
+          <div class="shape__row"><i>Pointed at</i><span>Their reasoning, elicited conversationally and reconciled against what the system actually does.</span></div>
+          <div class="shape__out"><span class="l">A successor onboarded in weeks instead of a year &mdash; and a single-person dependency that stops being a board-level risk.</span></div>
+        </div>
       </div>
       <div class="scope">
         <b>Every one of them, scoped the same way</b>

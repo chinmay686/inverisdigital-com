@@ -368,3 +368,11 @@ main{padding-top:var(--nav-h)}
 .persona__i span{color:var(--slate)}
 @media(max-width:960px){.hero__grid{grid-template-columns:1fr;gap:28px}.hero h1{max-width:20ch}.hero__sub{max-width:56ch}}
 @media(max-width:820px){.persona{grid-template-columns:1fr}.persona__i{border-right:none;border-bottom:1px solid var(--mist);padding:16px 0}.persona__i:last-child{border-bottom:none}}
+
+/* ===== v9.2 fixes ===== */
+.nav__links a.active{color:#fff}
+.planes__flow{text-align:center;font-size:.88rem;color:#888780;margin-top:16px}
+.shape__n{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.shape__lead{font-family:var(--f-body);font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ocean);background:var(--lime);border-radius:20px;padding:3px 9px}
+.shape--lead{border-top:3px solid var(--lime)}
+.shape{border-top:3px solid var(--mist)}

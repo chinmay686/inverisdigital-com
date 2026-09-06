@@ -4,12 +4,15 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Contact — Inveris Digital</title>
-<meta name="description" content="Tell us where your knowledge risk is highest. A 30-minute discovery call, then a fixed-fee pilot in your cloud." />
+<meta name="description" content="Tell us which system is keeping you up. Thirty minutes, then a near-zero-cost proof of concept on one system you name." />
+<meta name="author" content="Inveris Digital, Inc." />
+<meta name="theme-color" content="#063A53" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href="https://inverisdigital.com/contact" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Inveris Digital" />
 <meta property="og:title" content="Contact — Inveris Digital" />
+<meta property="og:description" content="Tell us which system is keeping you up. Thirty minutes, then a near-zero-cost proof of concept on one system you name." />
 <meta property="og:url" content="https://inverisdigital.com/contact" />
 <meta property="og:image" content="https://inverisdigital.com/og-image-v2.png" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -20,16 +23,15 @@
 <link rel="stylesheet" href="inveris.css">
 </head>
 <body>
-
 <header class="nav">
   <div class="nav__in container">
-    <a href="index.html" aria-label="Inveris Digital — home"><img class="nav__logo" src="logo-white.svg" alt="Inveris Digital"></a>
+    <a href="index.html" aria-label="Inveris Digital — home"><img class="logo" src="logo-white.svg" alt="Inveris Digital"></a>
     <input type="checkbox" id="nvt" class="nav__toggle" aria-hidden="true"><label for="nvt" class="nav__burger" aria-label="Open menu"><span></span><span></span><span></span></label>
-      <nav class="nav__links">
+    <nav class="nav__links">
       <a href="offering.html">What we do</a>
       <a href="iris.html">IRIS</a>
       <a href="insights.html">Insights</a>
-      <a href="contact.html" class="btn btn-lime nav__cta">Book a discovery call</a>
+      <button class="btn btn-lime nav__cta" type="button" data-sc="">Book a discovery call</button>
     </nav>
   </div>
 </header>
@@ -38,55 +40,51 @@
   <section class="phero">
     <div class="container phero__in">
       <div class="kicker" style="color:var(--glass)">Contact</div>
-      <h1>Tell us where the knowledge risk is.</h1>
-      <p class="lead">A 30-minute discovery call to see where a system nobody can fully explain is putting you at risk. If there's a fit, we scope a fixed-fee pilot — in your cloud, with the deliverable assigned to you.</p>
+      <h1>Tell us which system is keeping you up.</h1>
+      <p class="lead">One system, one conversation. We will tell you whether this is a fit &mdash; and if it is not, who we would send you to instead.</p>
     </div>
   </section>
 
   <section class="section s-ocean">
-    <div class="container ct-grid">
-      <div>
-        <div class="kicker" style="color:var(--lime)">What happens next</div>
-        <div class="ct-steps">
-          <div class="ct-step"><div class="ct-step__n">01</div><div><strong>A 30-minute call</strong><span>We learn your stack, your dependencies, and where the knowledge is most at risk.</span></div></div>
-          <div class="ct-step"><div class="ct-step__n">02</div><div><strong>A scoped pilot, under NDA</strong><span>If it fits, a fixed-fee pilot on one system — in your cloud, nothing leaving your environment.</span></div></div>
-          <div class="ct-step"><div class="ct-step__n">03</div><div><strong>A deliverable you own</strong><span>A validated specification, signed by a named engineer, with the IP assigned to you.</span></div></div>
+    <div class="container">
+      <div class="ct-grid">
+        <div>
+          <div class="kicker">What happens next</div>
+          <h2 class="h2">Three steps, no deck.</h2>
+          <div class="ct-steps">
+            <div class="ct-step"><div class="ct-step__n">01</div><div><strong>A thirty-minute call</strong><span>We find where your knowledge risk is highest. No presentation, no discovery questionnaire.</span></div></div>
+            <div class="ct-step"><div class="ct-step__n">02</div><div><strong>You name one system</strong><span>The one with the fewest people who understand it. We scope a proof of concept around it &mdash; at near-zero cost, underwritten by us.</span></div></div>
+            <div class="ct-step"><div class="ct-step__n">03</div><div><strong>Six weeks, then you decide</strong><span>Your reviewer confirms the specification. The IP is yours either way, and there is nothing to continue if it did not work.</span></div></div>
+          </div>
+          <div class="ct-direct">
+            Prefer email? <a href="mailto:info@inverisdigital.com">info@inverisdigital.com</a><br>
+            We reply from a person, usually the same day. Nothing here is shared, and you will not be added to a mailing list.
+          </div>
         </div>
-        <div class="ct-direct">
-          <span style="color:rgba(245,247,246,.7);font-size:.85rem;display:block;margin-bottom:4px">Prefer email?</span>
-          <a href="mailto:info@inverisdigital.com">info@inverisdigital.com</a>
-        </div>
-      </div>
-
-      <form class="form" action="https://formspree.io/f/mvzldklb" method="POST">
-        <input type="hidden" name="_subject" value="Inveris Digital — new discovery-call request">
-        <div class="row">
-          <label><span>Name</span><input type="text" name="name" required></label>
-          <label><span>Work email</span><input type="email" name="email" required></label>
-        </div>
-        <div class="row">
+        <form class="form" action="https://formspree.io/f/mvzldklb" method="POST">
+          <input type="hidden" name="_subject" value="Inveris Digital — contact page enquiry">
+          <div class="row">
+            <label><span>Name</span><input type="text" name="name" required></label>
+            <label><span>Work email</span><input type="email" name="email" required></label>
+          </div>
           <label><span>Company</span><input type="text" name="company" required></label>
-          <label><span>Role / title</span><input type="text" name="role"></label>
-        </div>
-        <label>
-          <span>What's driving this? <span class="opt">— optional</span></span>
-          <select name="trigger">
-            <option value="">Select if it helps…</option>
-            <option>An open 483 or upcoming inspection</option>
-            <option>A recent acquisition or carve-out</option>
-            <option>A system nobody can fully explain</option>
-            <option>A key person leaving with no successor</option>
-            <option>A migration or modernization ahead</option>
-            <option>Just exploring</option>
-          </select>
-        </label>
-        <label>
-          <span>Tell us about the system <span class="opt">— optional</span></span>
-          <textarea name="message" placeholder="Which system, and what's forcing the timing? The more specific, the faster we can reply."></textarea>
-        </label>
-        <button type="submit" class="btn btn-ocean">Book a discovery call →</button>
-        <p class="priv">We reply within one business day. Your details are used only to respond — never shared.</p>
-      </form>
+          <label><span>What&rsquo;s driving this? <span class="opt">optional</span></span>
+            <select name="trigger">
+              <option value="">Select one, or leave blank</option>
+              <option>An open 483 or an inspection coming</option>
+              <option>A legacy estate we recently acquired</option>
+              <option>A contract or billing engine nobody can explain</option>
+              <option>A migration resting on an as-is nobody wrote down</option>
+              <option>A key person leaving with no successor</option>
+              <option>A submission waiting on documentation</option>
+              <option>Just exploring</option>
+            </select>
+          </label>
+          <label><span>Anything useful to know? <span class="opt">optional</span></span><textarea name="message"></textarea></label>
+          <button class="btn btn-ocean" type="submit">Send &rarr;</button>
+          <p class="priv">We will only use this to reply. Nothing about your systems needs to be shared before an NDA is in place.</p>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -97,13 +95,84 @@
       <div>
         <img class="footer__logo" src="logo-white.svg" alt="Inveris Digital">
         <div class="footer__sig">The Intelligence to Imagine. The Platforms to <span class="em-lime">Realize.</span></div>
-        <p class="footer__tag">We turn what your organization knows into evidence it can defend. For regulated MedTech.</p>
+        <p class="footer__tag">We capture what your organisation knows &mdash; in its code and in its people &mdash; and turn it into evidence it can defend. For regulated MedTech.</p>
       </div>
-      <div class="footer__col"><h4>Company</h4><a href="offering.html">What we do</a><a href="iris.html">IRIS</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></div>
-      <div class="footer__col"><h4>Get in touch</h4><a href="mailto:info@inverisdigital.com">info@inverisdigital.com</a><a href="contact.html">Book a discovery call</a></div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="offering.html">What we do</a>
+        <a href="iris.html">IRIS</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Get in touch</h4>
+        <a href="mailto:info@inverisdigital.com">info@inverisdigital.com</a>
+        <a href="contact.html">Book a discovery call</a>
+      </div>
     </div>
-    <div class="footer__bottom"><span>© 2026 Inveris Digital, Inc.</span><span>Fremont, California</span></div>
+    <div class="footer__bottom"><span>&copy; 2026 Inveris Digital, Inc.</span><span>Fremont, California</span></div>
   </div>
 </footer>
+
+<div class="modal" id="mdl" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mdlt">
+  <div class="modal__c">
+    <button class="modal__x" type="button" id="mdlx" aria-label="Close">&times;</button>
+    <h3 id="mdlt">Let&rsquo;s put the right person on it.</h3>
+    <p class="modal__sub">Thirty minutes, no deck. We will tell you whether this is a fit and, if it is not, who we would send you to instead.</p>
+    <div class="modal__sc" id="mdlsc" hidden></div>
+    <form action="https://formspree.io/f/mvzldklb" method="POST">
+      <input type="hidden" name="scenario" id="mdlsci">
+      <input type="hidden" name="_subject" value="Inveris Digital — website enquiry">
+      <div class="fld"><label for="f-n">Name</label><input id="f-n" name="name" type="text" required></div>
+      <div class="fld"><label for="f-e">Work email</label><input id="f-e" name="email" type="email" required></div>
+      <div class="fld"><label for="f-c">Company</label><input id="f-c" name="company" type="text" required></div>
+      <div class="fld"><label for="f-m">Anything useful to know? <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label><textarea id="f-m" name="message"></textarea></div>
+      <button class="btn btn-ocean" type="submit" style="width:100%;justify-content:center">Send &rarr;</button>
+      <p class="modal__note">We reply from a person, usually the same day. Nothing here is shared, and we will not add you to a mailing list.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ---- HubSpot wiring ----------------------------------------------------
+     Portal ID is live. Paste the form GUID from HubSpot (Marketing > Forms >
+     your form > Share > the id in the embed code) and submissions will create
+     or update a Contact in HubSpot as well as posting to Formspree.
+     Leave HS_FORM_GUID empty and only Formspree is used.                    */
+  var HS_PORTAL_ID='245979863', HS_FORM_GUID='';
+  var m=document.getElementById('mdl'),sc=document.getElementById('mdlsc'),si=document.getElementById('mdlsci'),last=null;
+  var frm=m.querySelector('form');
+  frm.addEventListener('submit',function(){
+    if(!HS_FORM_GUID) return;
+    try{
+      var f=new FormData(frm);
+      fetch('https://api.hsforms.com/submissions/v3/integration/submit/'+HS_PORTAL_ID+'/'+HS_FORM_GUID,{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({fields:[
+          {name:'firstname',value:f.get('name')||''},
+          {name:'email',value:f.get('email')||''},
+          {name:'company',value:f.get('company')||''},
+          {name:'message',value:((f.get('scenario')||'')+' \u2014 '+(f.get('message')||''))}
+        ],context:{pageUri:location.href,pageName:document.title}})
+      });
+    }catch(e){}
+  });
+  function open(t){
+    if(t){sc.textContent='\u201C'+t+'\u201D';sc.hidden=false;si.value=t;}
+    else{sc.hidden=true;si.value='General enquiry';}
+    m.setAttribute('data-open','1');m.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    var f=document.getElementById('f-n'); if(f){f.focus();}
+  }
+  function close(){m.removeAttribute('data-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';if(last){last.focus();}}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-sc]');
+    if(b){last=b;open(b.getAttribute('data-sc'));return;}
+    if(e.target.id==='mdlx'||e.target===m){close();}
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.hasAttribute('data-open')){close();}});
+})();
+</script>
 </body>
 </html>

@@ -156,15 +156,5 @@
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.hasAttribute('data-open')){close();}});
 })();
 </script>
-<script>
-/* /demo is the destination of a LinkedIn CTA and printed collateral. Open the
-   form on arrival so the link does what the post promises. Reuses the
-   delegated [data-sc] handler above rather than duplicating it.            */
-(function(){
-  function go(){ var b=document.getElementById('demo-open'); if(b){ b.click(); } }
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',go);}
-  else{go();}
-})();
-</script>
 </body>
 </html>

@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact — Inveris Digital</title>
-<meta name="description" content="Tell us which system is keeping you up. Thirty minutes, then a near-zero-cost proof of concept on one system you name." />
+<title>Bring a codebase &mdash; Inveris Digital</title>
+<meta name="description" content="Choose a system with no usable design documents and we will run IRIS against it. Specifications, a system map and a scored FMEA, every line citing its file, corrected and signed by one of your engineers." />
 <meta name="author" content="Inveris Digital, Inc." />
 <meta name="theme-color" content="#063A53" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<link rel="canonical" href="https://inverisdigital.com/contact" />
+<link rel="canonical" href="https://inverisdigital.com/demo" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Inveris Digital" />
-<meta property="og:title" content="Contact — Inveris Digital" />
-<meta property="og:description" content="Tell us which system is keeping you up. Thirty minutes, then a near-zero-cost proof of concept on one system you name." />
-<meta property="og:url" content="https://inverisdigital.com/contact" />
+<meta property="og:title" content="Bring a codebase &mdash; Inveris Digital" />
+<meta property="og:description" content="Choose a system with no usable design documents and we will run IRIS against it. How much of your last submission was reconstructed rather than retrieved?" />
+<meta property="og:url" content="https://inverisdigital.com/demo" />
 <meta property="og:image" content="https://inverisdigital.com/og-image-v2.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://inverisdigital.com/og-image-v2.png" />
@@ -37,54 +37,34 @@
 </header>
 
 <main>
-  <section class="phero">
-    <div class="container phero__in">
-      <div class="kicker" style="color:var(--glass)">Contact</div>
-      <h1>Tell us which system is keeping you up.</h1>
-      <p class="lead">One system, one conversation. We will tell you whether this is a fit &mdash; and if it is not, who we would send you to instead.</p>
-    </div>
-  </section>
-
-  <section class="section s-ocean">
-    <div class="container">
-      <div class="ct-grid">
+  <section class="hero">
+    <div class="container hero__in">
+      <div class="hero__grid">
         <div>
-          <div class="kicker">What happens next</div>
-          <h2 class="h2">Three steps, no deck.</h2>
-          <div class="ct-steps">
-            <div class="ct-step"><div class="ct-step__n">01</div><div><strong>A thirty-minute call</strong><span>We find where your knowledge risk is highest. No presentation, no discovery questionnaire.</span></div></div>
-            <div class="ct-step"><div class="ct-step__n">02</div><div><strong>You name one system</strong><span>The one with the fewest people who understand it. We scope a proof of concept around it &mdash; at near-zero cost, underwritten by us.</span></div></div>
-            <div class="ct-step"><div class="ct-step__n">03</div><div><strong>Six weeks, then you decide</strong><span>Your reviewer confirms the specification. The IP is yours either way, and there is nothing to continue if it did not work.</span></div></div>
-          </div>
-          <div class="ct-direct">
-            Prefer email? <a href="mailto:info@inverisdigital.com">info@inverisdigital.com</a><br>
-            We reply from a person, usually the same day. Nothing here is shared, and you will not be added to a mailing list.
+          <div class="kicker" style="color:var(--glass);margin-bottom:10px">For regulated MedTech &amp; life sciences</div>
+          <h1>Bring a codebase. We&rsquo;ll run IRIS against it.</h1>
+          <p class="hero__deck">How much of your last submission was reconstructed rather than retrieved?</p>
+          <p class="hero__sub">You choose the system &mdash; the old one, in a language nobody wants to touch, where the design documents that would have helped never existed. We run IRIS against the source and show you what comes back: <b>specifications, a system map, and a risk file with severity, occurrence and detection scored.</b> Every line cites where it came from. Then one of your engineers corrects what is wrong, and what gets filed carries their signature, not a model&rsquo;s.</p>
+          <div class="hero__cta">
+            <button class="btn btn-lime" id="demo-open" type="button" data-sc="Demo request &mdash; run IRIS on my codebase (/demo)">Name your codebase &rarr;</button>
+            <a href="index.html" class="btn btn-ghost">Read the argument first</a>
           </div>
         </div>
-        <form class="form" action="https://formspree.io/f/mvzldklb" method="POST">
-          <input type="hidden" name="_subject" value="Inveris Digital — contact page enquiry">
-      <input type="hidden" name="_next" value="https://inverisdigital.com/thanks">
-          <div class="row">
-            <label><span>Name</span><input type="text" name="name" required></label>
-            <label><span>Work email</span><input type="email" name="email" required></label>
+        <div class="hero__vid">
+          <div class="hero__vid-f">
+            <video controls preload="none" poster="iris-teaser-poster.jpg">
+              <source src="iris-teaser-web-720p.mp4" type="video/mp4">
+            </video>
           </div>
-          <label><span>Company</span><input type="text" name="company" required></label>
-          <label><span>What&rsquo;s driving this? <span class="opt">optional</span></span>
-            <select name="trigger">
-              <option value="">Select one, or leave blank</option>
-              <option>An open 483 or an inspection coming</option>
-              <option>A legacy estate we recently acquired</option>
-              <option>A contract or billing engine nobody can explain</option>
-              <option>A migration resting on an as-is nobody wrote down</option>
-              <option>A key person leaving with no successor</option>
-              <option>A submission waiting on documentation</option>
-              <option>Just exploring</option>
-            </select>
-          </label>
-          <label><span>Anything useful to know? <span class="opt">optional</span></span><textarea name="message"></textarea></label>
-          <button class="btn btn-ocean" type="submit">Send &rarr;</button>
-          <p class="priv">We will only use this to reply. Nothing about your systems needs to be shared before an NDA is in place.</p>
-        </form>
+          <div class="hero__vid-c">See IRIS work on a system like yours &middot; 90 seconds &middot; no sign-up</div>
+        </div>
+      </div>
+      <div class="hero__proof">
+        <span>You pick the codebase</span>
+        <span>POC at near-zero cost &mdash; we underwrite it</span>
+        <span>Runs in your own cloud</span>
+        <span>A named engineer signs</span>
+        <span>IP assigned to you outright</span>
       </div>
     </div>
   </section>
@@ -118,8 +98,8 @@
 <div class="modal" id="mdl" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mdlt">
   <div class="modal__c">
     <button class="modal__x" type="button" id="mdlx" aria-label="Close">&times;</button>
-    <h3 id="mdlt">Let&rsquo;s put the right person on it.</h3>
-    <p class="modal__sub">Thirty minutes, no deck. We will tell you whether this is a fit and, if it is not, who we would send you to instead.</p>
+    <h3 id="mdlt">Tell us which codebase.</h3>
+    <p class="modal__sub">Name the system and we will come back with what we would run, what you would get, and whether this is a fit. If it is not, we will say so.</p>
     <div class="modal__sc" id="mdlsc" hidden></div>
     <form action="https://formspree.io/f/mvzldklb" method="POST">
       <input type="hidden" name="scenario" id="mdlsci">
@@ -128,7 +108,7 @@
       <div class="fld"><label for="f-n">Name</label><input id="f-n" name="name" type="text" required></div>
       <div class="fld"><label for="f-e">Work email</label><input id="f-e" name="email" type="email" required></div>
       <div class="fld"><label for="f-c">Company</label><input id="f-c" name="company" type="text" required></div>
-      <div class="fld"><label for="f-m">Anything useful to know? <span style="text-transform:none;letter-spacing:0;font-weight:400">(optional)</span></label><textarea id="f-m" name="message"></textarea></div>
+      <div class="fld"><label for="f-m">Which system do you have in mind? <span style="text-transform:none;letter-spacing:0;font-weight:400">(language, age, what is missing)</span></label><textarea id="f-m" name="message" placeholder="e.g. instrument firmware, C and assembly, ~12 years old, no current design documents"></textarea></div>
       <button class="btn btn-ocean" type="submit" style="width:100%;justify-content:center">Send &rarr;</button>
       <p class="modal__note">We reply from a person, usually the same day. Nothing here is shared, and we will not add you to a mailing list.</p>
     </form>
@@ -174,6 +154,16 @@
     if(e.target.id==='mdlx'||e.target===m){close();}
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.hasAttribute('data-open')){close();}});
+})();
+</script>
+<script>
+/* /demo is the destination of a LinkedIn CTA and printed collateral. Open the
+   form on arrival so the link does what the post promises. Reuses the
+   delegated [data-sc] handler above rather than duplicating it.            */
+(function(){
+  function go(){ var b=document.getElementById('demo-open'); if(b){ b.click(); } }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',go);}
+  else{go();}
 })();
 </script>
 </body>

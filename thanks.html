@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thank you &mdash; Inveris Digital</title>
+<meta name="description" content="We have your message. A person replies, usually the same day." />
+<meta name="author" content="Inveris Digital, Inc." />
+<meta name="theme-color" content="#063A53" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="canonical" href="https://inverisdigital.com/thanks" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="inveris.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav__in container">
+    <a href="index.html" aria-label="Inveris Digital — home"><img class="logo" src="logo-white.svg" alt="Inveris Digital"></a>
+    <input type="checkbox" id="nvt" class="nav__toggle" aria-hidden="true"><label for="nvt" class="nav__burger" aria-label="Open menu"><span></span><span></span><span></span></label>
+    <nav class="nav__links">
+      <a href="offering.html">What we do</a>
+      <a href="iris.html">IRIS</a>
+      <a href="insights.html">Insights</a>
+      <button class="btn btn-lime nav__cta" type="button" data-sc="">Book a discovery call</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section s-cloud">
+    <div class="container-narrow">
+      <div class="kicker">Message received</div>
+      <h2 class="h2">Thank you. It landed with a person, not a queue.</h2>
+      <p class="lead">Someone reads it today. You will get a reply from a named person &mdash; usually the same day, and at the latest the next working one. If what you described is a fit, we will say what we would run and what you would get. If it is not a fit, we will say that too, and point you at whoever we think is better placed.</p>
+
+      <div id="sched" hidden>
+        <p class="lead" style="margin-top:26px"><b>Would you rather just take a slot?</b> Thirty minutes, no deck. Pick a time that works and the invite goes straight into your calendar.</p>
+        <div class="cta__btns" style="margin-top:20px">
+          <a class="btn btn-lime" id="schedlink" href="#">Book 30 minutes &rarr;</a>
+          <a href="index.html" class="btn btn-ghost">Back to the site</a>
+        </div>
+      </div>
+
+      <div id="nosched">
+        <div class="cta__btns" style="margin-top:26px">
+          <a href="index.html" class="btn btn-lime">Back to the site &rarr;</a>
+          <a href="mailto:info@inverisdigital.com" class="btn btn-ghost">Or email us directly</a>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:26px;font-size:15px">Nothing you sent is shared, and you will not be added to a mailing list.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <img class="footer__logo" src="logo-white.svg" alt="Inveris Digital">
+        <div class="footer__sig">The Intelligence to Imagine. The Platforms to <span class="em-lime">Realize.</span></div>
+        <p class="footer__tag">We capture what your organisation knows &mdash; in its code and in its people &mdash; and turn it into evidence it can defend. For regulated MedTech.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="offering.html">What we do</a>
+        <a href="iris.html">IRIS</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Get in touch</h4>
+        <a href="mailto:info@inverisdigital.com">info@inverisdigital.com</a>
+        <a href="contact.html">Book a discovery call</a>
+      </div>
+    </div>
+    <div class="footer__bottom"><span>&copy; 2026 Inveris Digital, Inc.</span><span>Fremont, California</span></div>
+  </div>
+</footer>
+
+<script>
+/* ---------------------------------------------------------------------------
+   SCHEDULER LINK — paste your booking URL between the quotes below.
+
+     Google Calendar appointment schedule:  https://calendar.app.google/xxxxxxxx
+     Zoom Scheduler:                        https://zoom.us/scheduler/xxxxxxxx
+
+   Leave it empty and the booking block simply does not appear — the page still
+   works and nothing is broken. Fill it in and the button switches on.
+   --------------------------------------------------------------------------- */
+var SCHEDULER_URL = '';
+
+(function(){
+  if(!SCHEDULER_URL) return;
+  var a=document.getElementById('schedlink');
+  if(!a) return;
+  a.href=SCHEDULER_URL;
+  a.target='_blank';
+  a.rel='noopener';
+  document.getElementById('sched').hidden=false;
+  document.getElementById('nosched').hidden=true;
+})();
+</script>
+</body>
+</html>
